@@ -112,6 +112,7 @@ class build_exe_map(build_exe):
 
     def reinitialize_command(self, command, reinit_subcommands=0):
         if command == "install_data":
+            import pdb; pdb.set_trace()
             install_data = build_exe.reinitialize_command(self, command,
                                                           reinit_subcommands)
             install_data.data_files = self.remap_data_files(install_data.data_files)
@@ -283,7 +284,7 @@ def map_data_file(data_file):
 
 
 def getdatafiles():
-    datafiles = initfiles + infofiles
+    datafiles = initfiles
 
     def listfiles(srcdir):
         return join(sitepackages, srcdir), [join(srcdir, f) for f in os.listdir(srcdir) if os.path.isfile(join(srcdir, f))]
