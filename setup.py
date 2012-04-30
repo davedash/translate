@@ -112,7 +112,6 @@ class build_exe_map(build_exe):
 
     def reinitialize_command(self, command, reinit_subcommands=0):
         if command == "install_data":
-            import pdb; pdb.set_trace()
             install_data = build_exe.reinitialize_command(self, command,
                                                           reinit_subcommands)
             install_data.data_files = self.remap_data_files(install_data.data_files)

@@ -21,5 +21,5 @@
 """This file contains the version of the Translate Toolkit."""
 
 build = 12012
-sver = "1.9.0"
+sver = "1.9.0-pinterest3"
 ver = (1, 9, 0)
